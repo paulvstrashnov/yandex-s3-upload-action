@@ -14,14 +14,6 @@ jobs:
       with:
        # persist-credentials: false
         fetch-depth: 0
-    - name: install
-      run: npm install
-    - name: build
-      #run: npx @vercel/ncc build ./src/index.js  
-      run: npm run build
-    - name: push
-      run: |
-
     - uses: tool3/ncc@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
