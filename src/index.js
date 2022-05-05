@@ -31,7 +31,7 @@ async function main() {
     save_name: true // сохранять оригинальные названия файлов 
   }, inputs.remotePath);
   console.log(upload);    // <- массив загруженных файлов
-  console.log('It works!');
+  // console.log('It works!');
 }
 
 main();
