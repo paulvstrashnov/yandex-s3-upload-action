@@ -14,9 +14,13 @@ inputs:
         description: "Bucket name"
         default: ""
         required: true
-    path:
+    localPath:
         description: "Path to file or folder to upload"
-        default: ""
+        default: "./"
+        required: true
+    remotePath:
+        description: "Path in Yandex S3 to upload files to"
+        default: "./"
         required: true
 runs:
     using: "node16"
