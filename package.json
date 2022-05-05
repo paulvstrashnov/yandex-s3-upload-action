@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/paulvstrashnov/yandex-s3-upload-action/issues"
   },
-  "homepage": "https://github.com/paulvstrashnov/yandex-s3-upload-action#readme"
+  "homepage": "https://github.com/paulvstrashnov/yandex-s3-upload-action#readme",
+  "devDependencies": {
+    "@vercel/ncc": "^0.33"
+  }
 }
