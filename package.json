@@ -1,0 +1,20 @@
+{
+  "name": "yandex-s3-upload-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"build": "ncc build src/action.js -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulvstrashnov/yandex-s3-upload-action.git"
+  },
+  "author": "Pavel Strashnov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulvstrashnov/yandex-s3-upload-action/issues"
+  },
+  "homepage": "https://github.com/paulvstrashnov/yandex-s3-upload-action#readme"
+}

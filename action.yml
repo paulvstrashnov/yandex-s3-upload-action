@@ -1,0 +1,26 @@
+name: "Upload to Yandex S3 Object Storage"
+description: "GH action for uploading files to Yandex S3 Object Storage"
+author: "Pavel Strashnov"
+inputs:
+    accessKeyId:
+        description: "Service account access key ID"
+        default: ""
+        required: true
+    secretAccessKey:
+        description: "Service account secret access key"
+        default: ""
+        required: true
+    bucket:
+        description: "Bucket name"
+        default: ""
+        required: true
+    path:
+        description: "Path to file or folder to upload"
+        default: ""
+        required: true
+runs:
+    using: "node16"
+    main: "dist/index.js"
+branding:
+    icon: "upload-cloud"
+    color: "blue"
