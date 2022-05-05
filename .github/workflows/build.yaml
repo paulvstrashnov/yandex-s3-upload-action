@@ -12,7 +12,7 @@ jobs:
     - uses: tool3/ncc@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        src: 'index.js'
+        src: 'src/index.js'
         branch: 'main'
         commit_msg: 'Build ./dist/index.js via Github Actions'
     - uses: actions/upload-artifact@v1
