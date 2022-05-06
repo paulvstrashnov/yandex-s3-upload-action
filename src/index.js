@@ -33,7 +33,7 @@ async function main() {
     // path: inputs.localPath,  // относительный путь до папки
     localPath: core.getInput("localPath", { required: true }),
     save_name: true // сохранять оригинальные названия файлов 
-  }, core.getInput("remotePath", { required: true }); // inputs.remotePath);
+  }, core.getInput("remotePath", { required: true })); // inputs.remotePath);
   console.log(upload);    // <- массив загруженных файлов
   // console.log('It works!');
 }
