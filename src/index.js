@@ -20,17 +20,20 @@ async function main() {
     auth: {
         // accessKeyId: inputs.accessKeyId,
         accessKeyId: core.getInput("accessKeyId", { required: true }),
-        secretAccessKey: inputs.secretAccessKey,
+        // secretAccessKey: inputs.secretAccessKey,
+        secretAccessKey: core.getInput("secretAccessKey", { required: true }),
     },
-    Bucket: inputs.bucket, 
+    // Bucket: inputs.bucket,
+    Bucket: core.getInput("bucket", { required: true }), 
     debug: true // Дебаг в консоли, потом можете удалить в релизе
   });
 
     // Относительный путь:
   const upload = await s3.Upload({
-    path: inputs.localPath,  // относительный путь до папки
+    // path: inputs.localPath,  // относительный путь до папки
+    localPath: core.getInput("localPath", { required: true }),
     save_name: true // сохранять оригинальные названия файлов 
-  }, inputs.remotePath);
+  }, core.getInput("remotePath", { required: true }); // inputs.remotePath);
   console.log(upload);    // <- массив загруженных файлов
   // console.log('It works!');
 }
