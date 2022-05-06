@@ -18,7 +18,8 @@ async function main() {
 
   const s3 = new EasyYandexS3({
     auth: {
-        accessKeyId: inputs.accessKeyId,
+        // accessKeyId: inputs.accessKeyId,
+        accessKeyId: core.getInput("accessKeyId", { required: true }),
         secretAccessKey: inputs.secretAccessKey,
     },
     Bucket: inputs.bucket, 
