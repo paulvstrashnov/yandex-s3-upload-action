@@ -15,10 +15,10 @@ jobs:
       with:
        # persist-credentials: false
         fetch-depth: 0
-    - name: install deps
-      run: |
-        npm install @actions/core
-        npm install easy-yandex-s3
+    # - name: install deps
+    #   run: |
+    #     npm install @actions/core
+    #     npm install easy-yandex-s3
     - uses: tool3/ncc@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
