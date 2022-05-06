@@ -17,6 +17,10 @@
     "url": "https://github.com/paulvstrashnov/yandex-s3-upload-action/issues"
   },
   "homepage": "https://github.com/paulvstrashnov/yandex-s3-upload-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.8",
+    "easy-yandex-s3": "^1.1"
+  },
   "devDependencies": {
     "@vercel/ncc": "^0.33"
   }
