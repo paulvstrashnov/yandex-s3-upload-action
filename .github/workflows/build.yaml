@@ -2,8 +2,9 @@ name: Build
 
 on:
   push:
-    paths-ignore:
-      - 'dist/**'
+    paths:
+      - 'src/**'
+      - '.github/workflows/build.yaml'
   workflow_dispatch:
 
 jobs:
