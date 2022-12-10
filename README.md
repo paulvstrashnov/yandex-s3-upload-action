@@ -3,6 +3,9 @@
 A simple Github Action for uploading files, e.g. a static website, to Yandex Cloud Object Storage.
 Based on @actions/core and [easy Yandex.S3](https://github.com/powerdot/easy-yandex-s3).
 
+
+This action created with @vercel/ncc, more info [here](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action#commit-tag-and-push-your-action-to-github)
+
 ### Requirements
 
 - Yandex Cloud service account `Key ID` and `Secret key`
@@ -28,5 +31,5 @@ steps:
       bucket: ${{ secrets.BUCKET }}
       localPath: "./slides"
       remotePath: "./slides"
-      clear: false
+      clearBucket: false
 ```
