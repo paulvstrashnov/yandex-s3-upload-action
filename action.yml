@@ -1,6 +1,6 @@
 name: "Upload to Yandex S3 Object Storage"
 description: "GH action for uploading files to Yandex S3 Object Storage"
-author: "Pavel Strashnov"
+author: "Pavel Strashnov and Ivan E :)"
 inputs:
     accessKeyId:
         description: "Service account access key ID"
@@ -22,6 +22,11 @@ inputs:
         description: "Path in Yandex S3 to upload files to"
         default: "./"
         required: true
+    clearBucket:
+        description: "Clear ALL storage"
+        default: 'false'
+        required: false
+
 runs:
     using: "node16"
     main: "dist/index.js"
