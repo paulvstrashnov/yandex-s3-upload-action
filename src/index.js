@@ -1,5 +1,5 @@
 import { getInput, getBooleanInput } from "@actions/core";
-import EasyYandexS3 from "easy-yandex-s3"; // https://github.com/powerdot/easy-yandex-s3
+import EasyYandexS3 from "easy-yandex-s3"; // https://github.com/playvision/easy-yandex-s3
 
 async function main() {
   // Get inputs from action.yml file
@@ -11,6 +11,8 @@ async function main() {
     localPath: getInput("localPath", { required: true }), // Relative path to files/folder to upload.
     remotePath: getInput("remotePath", { required: true }), // Relative path to upoload to.
     clearBucket: getBooleanInput("clearBucket", { required: false }), //clear bucket
+    ignore: getInput("ignore", { required: false }),
+    cacheControl: getInput("cacheControl", { required: false }),
   };
 
   const s3 = new EasyYandexS3({
@@ -29,11 +31,15 @@ async function main() {
     console.log("Skip clear");
   }
 
+  const ignoreList = inputs.ignore ? inputs.ignore.split(';') : undefined;
+
   // Относительный путь:
   const upload = await s3.Upload(
     {
       path: inputs.localPath, // относительный путь до папки
       save_name: true, // сохранять оригинальные названия файлов
+      ignore: ignoreList,
+      cacheControl: inputs.cacheControl,
     },
     inputs.remotePath
   );
